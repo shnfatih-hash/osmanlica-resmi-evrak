@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Örnek Diplomatik Çalışma Kartı — Sadâret Arz Tezkiresi ve İrâde-i Seniyye</title>
+<style>
+  :root {
+    --bg: #f8f5ee; --card: #ffffff; --ink: #1e242b; --muted: #5c6670;
+    --accent: #7a2e2e; --gold: #9a6b2f; --ia: #1f5c4e; --border: #e2dac9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: "Segoe UI", "Noto Sans", system-ui, sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.65;
+  }
+  header {
+    background: linear-gradient(135deg, #1b2838 0%, #2c3e50 100%);
+    color: #fdfbf7; padding: 28px 24px; border-bottom: 4px solid var(--gold);
+  }
+  header .wrap, main.wrap { max-width: 1120px; margin: 0 auto; padding: 0 18px; }
+  header h1 { margin: 0 0 6px; font-family: Georgia, serif; font-size: 1.7rem; font-weight: 600; }
+  header p { margin: 0; opacity: .88; font-size: .95rem; }
+  .toolbar {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between;
+    margin: 20px 0 14px; padding: 12px 16px; background: var(--card);
+    border: 1px solid var(--border); border-radius: 10px;
+  }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tab-btn, .mode-btn {
+    border: 1px solid var(--border); background: #faf7f0; color: var(--ink);
+    padding: 7px 13px; border-radius: 7px; cursor: pointer; font-size: .88rem; font-weight: 600;
+  }
+  .tab-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .mode-btn.active { background: var(--ia); color: #fff; border-color: var(--ia); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 20px; margin-bottom: 18px; box-shadow: 0 2px 6px rgba(0,0,0,.03);
+  }
+  h2 { margin: 0 0 12px; font-family: Georgia, serif; color: var(--accent); font-size: 1.25rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { padding: 9px 11px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  th { background: #f3ede0; color: #362e23; font-weight: 600; }
+  .line-card {
+    background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--gold);
+    border-radius: 8px; padding: 14px 16px; margin-bottom: 12px;
+  }
+  .line-head { display: flex; gap: 8px; margin-bottom: 8px; }
+  .badge { background: var(--accent); color: #fff; padding: 2px 9px; border-radius: 99px; font-size: .78rem; font-weight: 600; }
+  .badge.subtle { background: #ece5d5; color: #4a3f30; }
+  .osm-text, .osm-cell {
+    font-family: "Amiri", "Traditional Arabic", "Scheherazade New", serif;
+    font-size: 1.38rem; line-height: 1.8; color: #161b22;
+  }
+  .tr-academic, .tr-simple { font-family: "Gentium Plus", Georgia, serif; font-size: 1.06rem; margin: 6px 0; }
+  .tr-modern { margin: 6px 0 0; color: #2b3540; font-size: .95rem; }
+  .hidden { display: none; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: .78rem; background: #edf2f7; color: #2d3748; }
+  .tag.gold { background: #f9eedb; color: #7a5219; }
+  .tag.warn { background: #fde8e8; color: #9b1c1c; }
+  .ext-link {
+    display: inline-block; padding: 3px 8px; border-radius: 5px; text-decoration: none;
+    font-size: .8rem; font-weight: 600; background: #f3ece0; color: var(--gold); border: 1px solid #e2d2b5;
+  }
+  .ext-link.ia { background: #e6f4f0; color: var(--ia); border-color: #b7dfd4; }
+  .search-input {
+    width: 100%; max-width: 360px; padding: 8px 12px; margin-bottom: 12px;
+    border: 1px solid var(--border); border-radius: 7px; font-size: .92rem;
+  }
+  .ia-card { border: 1px solid #cce3dc; background: #f7fcfa; border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
+  .ia-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+  .ia-head h4 { margin: 0; color: var(--ia); font-size: 1.05rem; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .crop-box img { max-width: 100%; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; }
+  .mini-crop { max-width: 160px; border: 1px solid var(--border); border-radius: 4px; }
+  @media print {
+    .toolbar, .search-input { display: none !important; }
+    .panel { display: block !important; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Örnek Diplomatik Çalışma Kartı — Sadâret Arz Tezkiresi ve İrâde-i Seniyye</h1>
+    <p>Üniversite Transkripsiyon Standardı (TDV İA / TTK / İSAM) • Kelime &amp; Tamlama Çözümlemesi • Şerhli Diplomatik Çalışma Kartı</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card" style="margin-top:18px;">
+    <h2>Arşiv ve Diplomatik Künye</h2>
+    <table><tr><th>Arşiv / Fon Künyesi</th><td>Örnek Şablon (BOA, İrâde Tasnifi Formatı)</td></tr>
+<tr><th>Belge Türü</th><td>Arz Tezkiresi &amp; İrâde-i Seniyye</td></tr>
+<tr><th>Hat Türü</th><td>Rik‘a</td></tr>
+<tr><th>Gönderen Makam / Kişi</th><td>Makām-ı Sadâret-i Uzmâ → Mâbeyn-i Hümâyûn Başkitâbeti</td></tr>
+<tr><th>Muhatap Makam / Kişi</th><td>Huzûr-ı Hümâyûn / Bâbıâlî</td></tr>
+<tr><th>Hicrî / Rûmî Tarih</th><td>H. 15 Şa‘bân 1278 / R. 3 Şubat 1277</td></tr>
+<tr><th>Milâdî Karşılık</th><td>15 Şubat 1862 Cumartesi</td></tr>
+<tr><th>Transkripsiyon Standardı</th><td>TDV İA / TTK / İSAM Tam Akademik</td></tr>
+</table>
+    <p style="margin-top:12px;"><strong>Belge Özeti:</strong> Taşra idare meclisinden gelen mazbata üzerine, vilâyet dâhilindeki eski bir köprünün tamiri ve masrafının yerel gelirlerden karşılanması hususunda Meclis-i Vâlâ kararı gereğince padişah izni (irâde-i seniyye) talep edilmektedir.</p>
+  </section>
+
+  <div class="toolbar">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab('tab-satir', this)">Satır Satır Okuma (4)</button>
+      <button class="tab-btn" onclick="openTab('tab-kelime', this)">Kelime Kelime (4)</button>
+      <button class="tab-btn" onclick="openTab('tab-tamlama', this)">Tamlamalar (3)</button>
+      <button class="tab-btn" onclick="openTab('tab-tdv', this)">TDV İA Kavramlar (3)</button>
+      <button class="tab-btn" onclick="openTab('tab-serh', this)">Şerh &amp; Aparat (1)</button>
+    </div>
+    <div>
+      <button class="mode-btn active" id="btn-academic" onclick="setMode('academic')">Tam Akademik (İA/TTK)</button>
+      <button class="mode-btn" id="btn-simple" onclick="setMode('simple')">Sadeleştirilmiş</button>
+    </div>
+  </div>
+
+  <section id="tab-satir" class="panel active">
+    
+        <article class="line-card">
+          <div class="line-head">
+            <span class="badge">Satır 1</span>
+            <span class="badge subtle">Elkab (Hitap)</span>
+          </div>
+          
+          <p class="osm-text" dir="rtl" lang="ota">عطوفتلو افندم حضرتلرى</p>
+          <p class="tr-academic" data-mode="academic">‘Aṭûfetlü efendim ḥażretleri,</p>
+          <p class="tr-simple hidden" data-mode="simple">Atûfetlü efendim hazretleri,</p>
+          <p class="tr-modern"><strong>Günümüz Türkçesi:</strong> Şefkatli efendim hazretleri,</p>
+        </article>
+        
+        <article class="line-card">
+          <div class="line-head">
+            <span class="badge">Satır 2</span>
+            <span class="badge subtle">Gövde (Nakil)</span>
+          </div>
+          
+          <p class="osm-text" dir="rtl" lang="ota">معروض چاكر كمينه‌لريدركه مجلس والادن قلمه آلنان مضبطه‌ده تصريح قلنديغى اوزره</p>
+          <p class="tr-academic" data-mode="academic">Ma‘rûż-ı çâker-i kemîneleridir ki, Meclis-i Vâlâ’dan ḳaleme alınan mażbaṭada taṣrîḥ ḳılındığı üzere</p>
+          <p class="tr-simple hidden" data-mode="simple">Ma‘rûz-ı çâker-i kemîneleridir ki, Meclis-i Vâlâ’dan kaleme alınan mazbatada tasrîh kılındığı üzere</p>
+          <p class="tr-modern"><strong>Günümüz Türkçesi:</strong> Aciz kulunuzun arzıdır ki, Meclis-i Vâlâ tarafından kaleme alınan tutanakta açıkça belirtildiği üzere</p>
+        </article>
+        
+        <article class="line-card">
+          <div class="line-head">
+            <span class="badge">Satır 3</span>
+            <span class="badge subtle">Gövde (Talep / Şerhli Örnek)</span>
+          </div>
+          
+          <p class="osm-text" dir="rtl" lang="ota">مذكور جسر [خراب؟] اولمغله تعميرى خصوصنده اراده سنيه حضرت پادشاهى</p>
+          <p class="tr-academic" data-mode="academic">meẕkûr cisr [ḫarâb?]¹ olmağla ta‘mîri ḫuṣûṣunda irâde-i seniyye-i ḥażret-i pâdişâhî</p>
+          <p class="tr-simple hidden" data-mode="simple">mezkûr cisr [harâb?]¹ olmağla ta‘mîri husûsunda irâde-i seniyye-i hazret-i pâdişâhî</p>
+          <p class="tr-modern"><strong>Günümüz Türkçesi:</strong> söz konusu köprü [harap?] olduğundan, onarılması hususunda yüce padişahın iradesi</p>
+        </article>
+        
+        <article class="line-card">
+          <div class="line-head">
+            <span class="badge">Satır 4</span>
+            <span class="badge subtle">Bitiş Formülü</span>
+          </div>
+          
+          <p class="osm-text" dir="rtl" lang="ota">اول بابده امر و فرمان حضرت من له الامرندر</p>
+          <p class="tr-academic" data-mode="academic">Ol bâbda emr ü fermân ḥażret-i men lehü’l-emrindir.</p>
+          <p class="tr-simple hidden" data-mode="simple">Ol bâbda emr ü fermân hazret-i men lehü’l-emrindir.</p>
+          <p class="tr-modern"><strong>Günümüz Türkçesi:</strong> Bu hususta emir ve ferman, emir sahibi olan zatındır.</p>
+        </article>
+        
+  </section>
+
+  <section id="tab-kelime" class="panel card">
+    <h2>Kelime Kelime Çözümleme (Müfredât)</h2>
+    <input class="search-input" type="search" placeholder="Kelime, köken veya anlam ara..." oninput="filterTable('tbl-kelime', this.value)">
+    <table id="tbl-kelime">
+      <thead><tr><th>Osmanlıca</th><th>Çeviriyazı</th><th>Köken</th><th>Anlam</th><th>Satır</th><th>Sözlük</th></tr></thead>
+      <tbody>
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">عطوفتلو</td>
+          <td><strong>‘aṭûfetlü</strong></td>
+          <td><span class="tag">Arapça + Türkçe</span></td>
+          <td>Şefkatli, merhametli; 19. yy Osmanlı protokolünde bâlâ rütbesindekilere ve Mâbeyn Başkâtibine hitap unvanı.</td>
+          <td>1</td>
+          <td><a class="ext-link" href="https://lugatim.com/s/atufetli" target="_blank" rel="noopener">Kubbealtı ↗</a></td>
+        </tr>
+        
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">مضبطه</td>
+          <td><strong>mażbaṭa</strong></td>
+          <td><span class="tag">Arapça</span></td>
+          <td>Meclis veya komisyon tarafından düzenlenip üyelerce mühürlenen resmî karar tutanağı.</td>
+          <td>2</td>
+          <td><a class="ext-link" href="https://lugatim.com/s/mazbata" target="_blank" rel="noopener">Kubbealtı ↗</a></td>
+        </tr>
+        
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">تصريح</td>
+          <td><strong>taṣrîḥ</strong></td>
+          <td><span class="tag">Arapça</span></td>
+          <td>Açıkça belirtme, sarahatle ifade etme.</td>
+          <td>2</td>
+          <td><a class="ext-link" href="https://lugatim.com/s/tasrih" target="_blank" rel="noopener">Kubbealtı ↗</a></td>
+        </tr>
+        
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">جسر</td>
+          <td><strong>cisr</strong></td>
+          <td><span class="tag">Arapça</span></td>
+          <td>Köprü.</td>
+          <td>3</td>
+          <td><a class="ext-link" href="https://lugatim.com/s/cisr" target="_blank" rel="noopener">Kubbealtı ↗</a></td>
+        </tr>
+        </tbody>
+    </table>
+  </section>
+
+  <section id="tab-tamlama" class="panel card">
+    <h2>Tamlamalar ve Kalıp İfadeler (Terkîbât)</h2>
+    <input class="search-input" type="search" placeholder="Tamlama veya tür ara..." oninput="filterTable('tbl-tamlama', this.value)">
+    <table id="tbl-tamlama">
+      <thead><tr><th>Osmanlıca</th><th>Çeviriyazı</th><th>Tamlama Türü</th><th>Yapısal Çözümleme</th><th>Günümüz Türkçesi</th><th>Doğrulama</th></tr></thead>
+      <tbody>
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">معروض چاكر كمينه‌لرى</td>
+          <td><strong>ma‘rûż-ı çâker-i kemîneleri</strong></td>
+          <td><span class="tag gold">Zincirleme Farsça Tamlama (Diplomatik Formül)</span></td>
+          <td>ma‘rûż (sunulan) + -ı + çâker (kul) + -i + kemîneleri (en acizleri)</td>
+          <td>En aciz kulunuzun arzıdır ki</td>
+          <td>
+            <a class="ext-link" href="https://lugatim.com/s/maruz-%C4%B1%20%C3%A7aker-i%20kemineleri" target="_blank" rel="noopener">Lugat ↗</a>
+            <a class="ext-link ia" href="https://islamansiklopedisi.org.tr/tezkire" target="_blank" rel="noopener">TDV İA ↗</a>
+          </td>
+        </tr>
+        
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">اراده سنيه حضرت پادشاهى</td>
+          <td><strong>irâde-i seniyye-i ḥażret-i pâdişâhî</strong></td>
+          <td><span class="tag gold">Farsça Sıfat + İsim Tamlaması</span></td>
+          <td>irâde (emir/istek) + -i + seniyye (yüce) + -i + ḥażret-i pâdişâhî (padişah hazretleri)</td>
+          <td>Yüce padişahın resmî emri / onayı</td>
+          <td>
+            <a class="ext-link" href="https://lugatim.com/s/irade-i%20seniyye" target="_blank" rel="noopener">Lugat ↗</a>
+            <a class="ext-link ia" href="https://islamansiklopedisi.org.tr/irade-i-seniyye" target="_blank" rel="noopener">TDV İA ↗</a>
+          </td>
+        </tr>
+        
+        <tr class="filter-row">
+          <td class="osm-cell" dir="rtl" lang="ota">من له الامر</td>
+          <td><strong>men lehü’l-emr</strong></td>
+          <td><span class="tag gold">Arapça Harf-i Tarifli İbare</span></td>
+          <td>men (kimse ki) + lehü (onundur) + el-emr (emir yetkisi)</td>
+          <td>Emir ve yetki sahibi olan makam</td>
+          <td>
+            <a class="ext-link" href="https://lugatim.com/s/men%20leh%C3%BCl-emr" target="_blank" rel="noopener">Lugat ↗</a>
+            <a class="ext-link ia" href="https://islamansiklopedisi.org.tr/arama/?q=men%20leh%C3%BCl-emr" target="_blank" rel="noopener">TDV İA ↗</a>
+          </td>
+        </tr>
+        </tbody>
+    </table>
+  </section>
+
+  <section id="tab-tdv" class="panel card">
+    <h2>Kurumsal ve Tarihsel Kavramlar (TDV İslâm Ansiklopedisi Atıflı)</h2>
+    
+        <div class="ia-card">
+          <div class="ia-head">
+            <h4>İrâde-i Seniyye</h4>
+            <a class="ext-link ia" href="https://islamansiklopedisi.org.tr/irade-i-seniyye" target="_blank" rel="noopener">TDV İslâm Ansiklopedisi'nde Aç ↗</a>
+          </div>
+          <p>Tanzimat öncesi ve sonrasında (1832&#x27;den itibaren) Bâbıâlî tarafından arz tezkiresiyle sunulan meselelerde padişahın sözlü emrinin Mâbeyn Başkâtibi aracılığıyla yazıya geçirilmesiyle oluşan resmî onay belgesidir.</p>
+          <p class="muted"><strong>Belgedeki Bağlamı:</strong> Satır 3&#x27;te köprünün tamiri için padişah onayı istenmektedir.</p>
+        </div>
+        
+        <div class="ia-card">
+          <div class="ia-head">
+            <h4>Meclis-i Vâlâ-yı Ahkâm-ı Adliyye</h4>
+            <a class="ext-link ia" href="https://islamansiklopedisi.org.tr/meclis-i-vala-yi-ahkam-i-adliyye" target="_blank" rel="noopener">TDV İslâm Ansiklopedisi'nde Aç ↗</a>
+          </div>
+          <p>II. Mahmud tarafından 1838&#x27;de kurulan, Tanzimat döneminde kanun/nizamname hazırlama, yüksek idarî yargı ve taşra mazbatalarını inceleme görevlerini yürüten yüksek devlet meclisidir.</p>
+          <p class="muted"><strong>Belgedeki Bağlamı:</strong> Satır 2&#x27;de karar mazbatasını düzenleyen üst kurul olarak geçmektedir.</p>
+        </div>
+        
+        <div class="ia-card">
+          <div class="ia-head">
+            <h4>Mazbata</h4>
+            <a class="ext-link ia" href="https://islamansiklopedisi.org.tr/mazbata" target="_blank" rel="noopener">TDV İslâm Ansiklopedisi'nde Aç ↗</a>
+          </div>
+          <p>Osmanlı bürokrasisinde bir meclisin veya komisyonun müzakere sonucunda aldığı ortak kararı gösteren ve üyelerin mühürleriyle onaylanan resmî tutanaktır.</p>
+          <p class="muted"><strong>Belgedeki Bağlamı:</strong> Satır 2&#x27;de Meclis-i Vâlâ karar belgesi anlamında kullanılmıştır.</p>
+        </div>
+        
+  </section>
+
+  <section id="tab-serh" class="panel card">
+    <h2>Şerh ve Kritik Aparat (Çözülemeyen / Şüpheli Yerler)</h2>
+    <table>
+      <thead><tr><th>No</th><th>Konum</th><th>Metindeki İbare</th><th>Kanıt</th><th>Şerh / Gerekçe</th><th>Alternatif Okunuşlar</th><th>1:1 Kesit</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>[1]</strong></td>
+          <td>Satır 3</td>
+          <td><code>[ḫarâb?]</code></td>
+          <td><span class="tag warn">B (Güçlü İhtimal)</span></td>
+          <td>Örnek şerh gösterimi: İlk harfin üst noktası silik olduğundan &#x27;ḫarâb&#x27; ile &#x27;müsta‘cel&#x27; / &#x27;münhedim&#x27; ihtimalleri 1:1 piksel kesitiyle karşılaştırılmıştır.</td>
+          <td>ḫarâb / münhedim</td>
+          <td>—</td>
+        </tr>
+        </tbody>
+    </table>
+  </section>
+</main>
+
+<script>
+function openTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function setMode(mode) {
+  document.querySelectorAll('[data-mode="academic"]').forEach(el => el.classList.toggle('hidden', mode !== 'academic'));
+  document.querySelectorAll('[data-mode="simple"]').forEach(el => el.classList.toggle('hidden', mode !== 'simple'));
+  document.getElementById('btn-academic').classList.toggle('active', mode === 'academic');
+  document.getElementById('btn-simple').classList.toggle('active', mode === 'simple');
+}
+function filterTable(tableId, query) {
+  const q = query.trim().toLowerCase();
+  document.querySelectorAll('#' + tableId + ' tbody tr.filter-row').forEach(tr => {
+    tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+{
+  "kunye": {
+    "baslik": "Örnek Diplomatik Çalışma Kartı — Sadâret Arz Tezkiresi ve İrâde-i Seniyye",
+    "arsiv_kunyesi": "Örnek Şablon (BOA, İrâde Tasnifi Formatı)",
+    "belge_turu": "Arz Tezkiresi & İrâde-i Seniyye",
+    "hat_turu": "Rik‘a",
+    "gonderen": "Makām-ı Sadâret-i Uzmâ → Mâbeyn-i Hümâyûn Başkitâbeti",
+    "muhatap": "Huzûr-ı Hümâyûn / Bâbıâlî",
+    "orijinal_tarih": "H. 15 Şa‘bân 1278 / R. 3 Şubat 1277",
+    "miladi_tarih": "15 Şubat 1862 Cumartesi",
+    "transkripsiyon_standardi": "TDV İA / TTK / İSAM Tam Akademik"
+  },
+  "ozet": "Taşra idare meclisinden gelen mazbata üzerine, vilâyet dâhilindeki eski bir köprünün tamiri ve masrafının yerel gelirlerden karşılanması hususunda Meclis-i Vâlâ kararı gereğince padişah izni (irâde-i seniyye) talep edilmektedir.",
+  "satirlar": [
+    {
+      "no": "1",
+      "bolge": "Elkab (Hitap)",
+      "osmanlica": "عطوفتلو افندم حضرتلرى",
+      "akademik": "‘Aṭûfetlü efendim ḥażretleri,",
+      "sadelestirilmis": "Atûfetlü efendim hazretleri,",
+      "gunumuz_turkcesi": "Şefkatli efendim hazretleri,"
+    },
+    {
+      "no": "2",
+      "bolge": "Gövde (Nakil)",
+      "osmanlica": "معروض چاكر كمينه‌لريدركه مجلس والادن قلمه آلنان مضبطه‌ده تصريح قلنديغى اوزره",
+      "akademik": "Ma‘rûż-ı çâker-i kemîneleridir ki, Meclis-i Vâlâ’dan ḳaleme alınan mażbaṭada taṣrîḥ ḳılındığı üzere",
+      "sadelestirilmis": "Ma‘rûz-ı çâker-i kemîneleridir ki, Meclis-i Vâlâ’dan kaleme alınan mazbatada tasrîh kılındığı üzere",
+      "gunumuz_turkcesi": "Aciz kulunuzun arzıdır ki, Meclis-i Vâlâ tarafından kaleme alınan tutanakta açıkça belirtildiği üzere"
+    },
+    {
+      "no": "3",
+      "bolge": "Gövde (Talep / Şerhli Örnek)",
+      "osmanlica": "مذكور جسر [خراب؟] اولمغله تعميرى خصوصنده اراده سنيه حضرت پادشاهى",
+      "akademik": "meẕkûr cisr [ḫarâb?]¹ olmağla ta‘mîri ḫuṣûṣunda irâde-i seniyye-i ḥażret-i pâdişâhî",
+      "sadelestirilmis": "mezkûr cisr [harâb?]¹ olmağla ta‘mîri husûsunda irâde-i seniyye-i hazret-i pâdişâhî",
+      "gunumuz_turkcesi": "söz konusu köprü [harap?] olduğundan, onarılması hususunda yüce padişahın iradesi"
+    },
+    {
+      "no": "4",
+      "bolge": "Bitiş Formülü",
+      "osmanlica": "اول بابده امر و فرمان حضرت من له الامرندر",
+      "akademik": "Ol bâbda emr ü fermân ḥażret-i men lehü’l-emrindir.",
+      "sadelestirilmis": "Ol bâbda emr ü fermân hazret-i men lehü’l-emrindir.",
+      "gunumuz_turkcesi": "Bu hususta emir ve ferman, emir sahibi olan zatındır."
+    }
+  ],
+  "kelimeler": [
+    {
+      "osmanlica": "عطوفتلو",
+      "transkripsiyon": "‘aṭûfetlü",
+      "sade": "atufetli",
+      "koken": "Arapça + Türkçe",
+      "anlam": "Şefkatli, merhametli; 19. yy Osmanlı protokolünde bâlâ rütbesindekilere ve Mâbeyn Başkâtibine hitap unvanı.",
+      "satir": "1",
+      "lugatim_sorgu": "atufetli"
+    },
+    {
+      "osmanlica": "مضبطه",
+      "transkripsiyon": "mażbaṭa",
+      "sade": "mazbata",
+      "koken": "Arapça",
+      "anlam": "Meclis veya komisyon tarafından düzenlenip üyelerce mühürlenen resmî karar tutanağı.",
+      "satir": "2",
+      "lugatim_sorgu": "mazbata"
+    },
+    {
+      "osmanlica": "تصريح",
+      "transkripsiyon": "taṣrîḥ",
+      "sade": "tasrih",
+      "koken": "Arapça",
+      "anlam": "Açıkça belirtme, sarahatle ifade etme.",
+      "satir": "2",
+      "lugatim_sorgu": "tasrih"
+    },
+    {
+      "osmanlica": "جسر",
+      "transkripsiyon": "cisr",
+      "sade": "cisr",
+      "koken": "Arapça",
+      "anlam": "Köprü.",
+      "satir": "3",
+      "lugatim_sorgu": "cisr"
+    }
+  ],
+  "tamlamalar": [
+    {
+      "osmanlica": "معروض چاكر كمينه‌لرى",
+      "transkripsiyon": "ma‘rûż-ı çâker-i kemîneleri",
+      "sade": "maruz-ı çaker-i kemineleri",
+      "tur": "Zincirleme Farsça Tamlama (Diplomatik Formül)",
+      "cozumleme": "ma‘rûż (sunulan) + -ı + çâker (kul) + -i + kemîneleri (en acizleri)",
+      "gunumuz_turkcesi": "En aciz kulunuzun arzıdır ki",
+      "tdv_ia_slug": "tezkire"
+    },
+    {
+      "osmanlica": "اراده سنيه حضرت پادشاهى",
+      "transkripsiyon": "irâde-i seniyye-i ḥażret-i pâdişâhî",
+      "sade": "irade-i seniyye",
+      "tur": "Farsça Sıfat + İsim Tamlaması",
+      "cozumleme": "irâde (emir/istek) + -i + seniyye (yüce) + -i + ḥażret-i pâdişâhî (padişah hazretleri)",
+      "gunumuz_turkcesi": "Yüce padişahın resmî emri / onayı",
+      "tdv_ia_slug": "irade-i-seniyye"
+    },
+    {
+      "osmanlica": "من له الامر",
+      "transkripsiyon": "men lehü’l-emr",
+      "sade": "men lehül-emr",
+      "tur": "Arapça Harf-i Tarifli İbare",
+      "cozumleme": "men (kimse ki) + lehü (onundur) + el-emr (emir yetkisi)",
+      "gunumuz_turkcesi": "Emir ve yetki sahibi olan makam",
+      "tdv_ia_slug": ""
+    }
+  ],
+  "tdv_ia_kavramlar": [
+    {
+      "madde": "İrâde-i Seniyye",
+      "slug": "irade-i-seniyye",
+      "aciklama": "Tanzimat öncesi ve sonrasında (1832'den itibaren) Bâbıâlî tarafından arz tezkiresiyle sunulan meselelerde padişahın sözlü emrinin Mâbeyn Başkâtibi aracılığıyla yazıya geçirilmesiyle oluşan resmî onay belgesidir.",
+      "belge_baglami": "Satır 3'te köprünün tamiri için padişah onayı istenmektedir."
+    },
+    {
+      "madde": "Meclis-i Vâlâ-yı Ahkâm-ı Adliyye",
+      "slug": "meclis-i-vala-yi-ahkam-i-adliyye",
+      "aciklama": "II. Mahmud tarafından 1838'de kurulan, Tanzimat döneminde kanun/nizamname hazırlama, yüksek idarî yargı ve taşra mazbatalarını inceleme görevlerini yürüten yüksek devlet meclisidir.",
+      "belge_baglami": "Satır 2'de karar mazbatasını düzenleyen üst kurul olarak geçmektedir."
+    },
+    {
+      "madde": "Mazbata",
+      "slug": "mazbata",
+      "aciklama": "Osmanlı bürokrasisinde bir meclisin veya komisyonun müzakere sonucunda aldığı ortak kararı gösteren ve üyelerin mühürleriyle onaylanan resmî tutanaktır.",
+      "belge_baglami": "Satır 2'de Meclis-i Vâlâ karar belgesi anlamında kullanılmıştır."
+    }
+  ],
+  "serhler": [
+    {
+      "no": "1",
+      "satir": "3",
+      "ibare": "[ḫarâb?]",
+      "kanit_seviyesi": "B (Güçlü İhtimal)",
+      "aciklama": "Örnek şerh gösterimi: İlk harfin üst noktası silik olduğundan 'ḫarâb' ile 'müsta‘cel' / 'münhedim' ihtimalleri 1:1 piksel kesitiyle karşılaştırılmıştır.",
+      "alternatifler": "ḫarâb / münhedim"
+    }
+  ]
+}
