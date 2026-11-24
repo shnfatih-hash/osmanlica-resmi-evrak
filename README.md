@@ -79,6 +79,14 @@ python scripts/sozluk_ve_html_uretici.py ornek_evrak.json --out evrak_calisma_ka
 
 ---
 
+## ♥ Projeye Gönüllü Destek
+
+Bu proje tamamen ücretsiz ve açık kaynaklıdır; herkesin özgürce kullanımına açık kalacaktır. Çalışmayı faydalı bulduysanız ve yeni Osmanlı arşivi, yazma eser ve dijital beşerî bilimler AI Skill'lerinin geliştirilmesine gönüllü olarak katkıda bulunmak isterseniz GitHub Sponsors üzerinden destek olabilirsiniz:
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Projeye%20Destek%20Ol-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/shnfatih-hash)
+
+---
+
 ## Lisans
 
 MIT Lisansı — bkz. [LICENSE](LICENSE).
