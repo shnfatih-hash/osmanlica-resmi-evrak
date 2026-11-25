@@ -9,9 +9,9 @@ Bu beceri, Osmanlı Türkçesi ile kaleme alınmış resmî evrak ve arşiv belg
 
 ---
 
-## 1. Çalışma Yöntemleri (Kullanıcıya Sunulacak 4 Mod)
+## 1. Çalışma Yöntemleri (Kullanıcıya Sunulacak 5 Mod)
 
-Kullanıcı belge(ler) paylaştığında veya talep ilettiğinde amacına uygun modu seçer (belirtilmemişse varsayılan olarak **Mod 1 + Mod 4** birlikte sunulur):
+Kullanıcı belge(ler) paylaştığında veya talep ilettiğinde amacına uygun modu seçer (belirtilmemişse tek evrakta varsayılan olarak **Mod 1 + Mod 4**, çok sayfalı defter/yazma eserde **Mod 5** sunulur):
 
 1. **Mod 1 — Tek Evrak Derin Diplomatik Okuma:** Bir belgenin tüm rükünlerini (davet, tuğra/başlık, elkab, nakil/iblâğ, hüküm/talep, tarih, imza/mühür, derkenar/hâmiş/buyuruldu) tespit ederek 3 katmanlı çıktı (*Künye + Akademik Transkripsiyon + Günümüz Türkçesi & Şerhler*) üretir.
 2. **Mod 2 — Seri / Dosya İnceleme ve Kronolojik İndeks:** Bir klasördeki birden fazla evrakı (ör. BOA dosya/gömlek serisi) tarih sırasına göre dizip her belge için özet künye, gönderen–alıcı matrisi ve şahıs/yer/kurum dizini çıkarır.
@@ -23,6 +23,10 @@ Kullanıcı belge(ler) paylaştığında veya talep ilettiğinde amacına uygun 
    - **Tamlamalar ve Kalıp İfadeler (Terkîbât)** tablosu (Farsça/Arapça izâfet türü, yapısal çözümleme, anlam),
    - **Kurumsal ve Tarihsel Kavramlar (TDV İA Atıflı)** bölümü (`islamansiklopedisi.org.tr` madde bağlantıları ve kısa diplomatik notlar),
    - **Şerh / Aparat (Çözülemeyen ve Şüpheli Yerler)** paneli.
+5. **Mod 5 — Çok Sayfalı Defter / Yazma Eserde Paralel Alt-Ajan (`Subagents`) + Ortak Sözlük (`glossary.md`) Orkestrasyonu:**
+   - 20–100+ sayfalık defter, mecmua veya el yazması PDF/görsel dizinlerinde ana oturum koordinatör olarak çalışır; proje klasöründe ortak bir `glossary.md` (ıstılahlar, şahıs/yer adları ve çeviri/transkripsiyon ilkeleri sözlüğü) başlatır.
+   - Sayfaları **10'arlı gruplar halinde paralel alt-ajanlara (`invoke_subagent`)** dağıtır; her ajan kendi sayfasını okuyup/çevirip `sayfalar/sayfa_XXX.md` olarak kaydeder ve yeni terimleri bildirir.
+   - Tüm sayfalar tamamlandığında ayrı bir **Tutarlılık ve Tahkik Editörü Alt-Ajanı** görevlendirerek `glossary.md` üzerinden tüm sayfalardaki kavram, özel isim ve üslup birliğini denetler *(Arapça/Osmanlıca/Farsça telif ve şerh yazmaları için kardeş beceri `yazma-eser-paralel-tercume` ile tam uyumludur)*.
 
 ---
 
@@ -103,10 +107,13 @@ Bu beceri, yerel dosya/klasör okumasının yanı sıra kullanıcının açık G
 | **TDV İslâm Ansiklopedisi** | `https://islamansiklopedisi.org.tr` | Kurumsal, hukukî, malî ve diplomatik terimler için canlı madde atfı ve kısa özgün şerh |
 | **TTK Tarih Çevirme Kılavuzu** | `https://www.ttk.gov.tr/tarih-cevirme-kilavuzu/` | Yerel `scripts/tarih_cevirici.py` çıktısının resmî çevrimiçi çapraz doğrulaması |
 
-### Chrome DevTools MCP Güvenlik ve Oturum Kuralları
-1. **Kullanıcı Girişi & CAPTCHA:** e-Devlet, BOA veya YEK Portal girişlerini ve varsa CAPTCHA doğrulamalarını daima **kullanıcı kendi tarayıcısında** yapar; ajan asla şifre istemez ve güvenlik duvarlarını aşmaya çalışmaz.
-2. **WAF Koruması:** `katalog.devletarsivleri.gov.tr` ve `portal.yek.gov.tr` üzerinde asla paralel toplu istek (`Promise.all`) atılmaz; sayfalar tek tek, aralarında en az `1800 ms` bekleme bırakarak incelenir (`scripts/arsiv_portal_helpers.js`). `HTTP 418 / 429` görülürse derhâl durulur.
-3. **Bağlantı Kurulumu:** Google Chrome'da yeni sekmede `chrome://inspect/#remote-debugging` açılıp **"Enable remote debugging"** kutucuğu işaretlenir; MCP yapılandırmasında `npx -y chrome-devtools-mcp@latest --autoConnect` kullanılır.
+### Chrome DevTools MCP Güvenlik, Yerleşik Tarayıcı Yasağı ve Oturum Kuralları
+1. **Antigravity Yerleşik Tarayıcısı (`browser` Alt-Ajanı) Yasağı — `"Web Sayfasına Erişim Engellendi"` Çözümü:**
+   - `katalog.devletarsivleri.gov.tr` ve `portal.yek.gov.tr` adreslerini **ASLA** Antigravity'nin kendi dahili tarayıcısında (`browser` subagent / gömülü webview) açmayın; kurum güvenlik duvarı yerleşik tarayıcıyı *"Web Sayfasına Erişim Engellendi"* ekranıyla bloklar.
+   - Yalnızca **`chrome-devtools` MCP** üzerinden kullanıcının bilgisayarındaki **normal Google Chrome** oturumuna bağlanın. Kullanıcı erişim engeli ekranıyla karşılaştıysa dahili tarayıcıyı kapatıp normal Google Chrome'da `chrome://inspect/#remote-debugging` ayarını açmasını ve portala normal Chrome üzerinden girmesini anlaşılır şekilde açıklayın.
+2. **Proje Klasörü Düzeni ve Kullanıcı Girişi:** Tüm kesitleri (`bolgeler/`, `kesitler/`) ve üretilen `.md / .html` çalışma kartlarını kullanıcının açtığı proje klasörü içine düzenli kaydedin. e-Devlet, BOA veya YEK Portal girişlerini ve varsa CAPTCHA doğrulamalarını daima **kullanıcı kendi normal Chrome tarayıcısında** yapar; ajan asla şifre istemez ve güvenlik duvarlarını aşmaya çalışmaz.
+3. **WAF Koruması:** `katalog.devletarsivleri.gov.tr` ve `portal.yek.gov.tr` üzerinde asla paralel toplu istek (`Promise.all`) atılmaz; sayfalar tek tek, aralarında en az `1800 ms` bekleme bırakarak incelenir (`scripts/arsiv_portal_helpers.js`). `HTTP 418 / 429` görülürse derhâl durulur.
+4. **Bağlantı Kurulumu:** Normal Google Chrome'da yeni sekmede `chrome://inspect/#remote-debugging` açılıp **"Enable remote debugging"** kutucuğu işaretlenir; MCP yapılandırmasında `npx -y chrome-devtools-mcp@latest --autoConnect` kullanılır.
 
 ---
 
