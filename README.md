@@ -3,9 +3,7 @@ title: Osmanlıca Resmî Evrak, Diplomatik & Paleografya AI Skill
 emoji: 🖋️
 colorFrom: red
 colorTo: yellow
-sdk: gradio
-sdk_version: 5.23.0
-app_file: app.py
+sdk: static
 pinned: true
 license: mit
 short_description: TDV İA/TTK transkripsiyon, 1:1 şerh ve interaktif HTML aracı
@@ -15,6 +13,7 @@ short_description: TDV İA/TTK transkripsiyon, 1:1 şerh ve interaktif HTML arac
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Bir%20Kahve%20Ismarla-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/shnfatih8)
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Projeye%20Destek%20Ol-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/shnfatih-hash)
+[![Hugging Face Space](https://img.shields.io/badge/🤗%20Hugging%20Face-Canlı%20Web%20Aracı-FFD21E?style=for-the-badge)](https://huggingface.co/spaces/sahanfatih/osmanlica-resmi-evrak)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-shnfatih--hash%2Fosmanlica--resmi--evrak-181717?style=for-the-badge&logo=github)](https://github.com/shnfatih-hash/osmanlica-resmi-evrak)
 
 Osmanlı Türkçesi ile kaleme alınmış resmî evrak ve arşiv belgelerini (**Ferman, Berat, İrade-i Seniyye, Arz Tezkiresi, Arz-ı Hâl, Tahrirat, Mazbata, Buyuruldu, Hüccet/İlam, Telgrafname, Vakfiye**) üniversitelerde geçerli **TDV İA / TTK / İSAM transkripsiyon sistemiyle** satır satır okuyan, çözülemeyen kısımlara **1:1 piksel kesitli şerh (kritik aparat)** düşen, **3 yönlü Hicrî/Rûmî/Milâdî tarih dönüşümü** yapan ve **kelime kelime + tamlama çözümlemeli interaktif HTML** çalışma sayfası üreten açık kaynaklı yapay zekâ becerisi (*Agent Skill* + *Canlı Web Aracı*).

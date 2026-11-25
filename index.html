@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osmanlıca Resmî Evrak, Diplomatik &amp; Paleografya AI Skill</title>
+<style>
+  :root {
+    --bg: #f8f5ee; --card: #ffffff; --ink: #1e242b; --muted: #5c6670;
+    --burgundy: #6b1d1d; --gold: #ffdd00; --ia: #1f5c4e; --pink: #ea4aaa; --border: #dfd6c5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  .hero { background: linear-gradient(135deg, #4a1c1c 0%, #2c3e50 100%); color: #fff; padding: 24px 20px; border-bottom: 4px solid var(--gold); }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  .hero-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+  .hero h1 { margin: 0 0 6px; font-size: 1.48rem; }
+  .hero p { margin: 0; opacity: 0.92; font-size: 0.94rem; max-width: 650px; }
+  .btn-group { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .btn-bmc { background: var(--gold); color: #111; font-weight: 700; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; }
+  .btn-sp { background: var(--pink); color: #fff; font-weight: 700; padding: 10px 16px; border-radius: 8px; text-decoration: none; font-size: 0.92rem; }
+  .btn-gh { background: #24292f; color: #fff; font-weight: 600; padding: 10px 14px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; border: 1px solid #57606a; }
+  main.wrap { padding: 18px 16px 36px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .tab-btn { border: 1px solid var(--border); background: #fdfbf7; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .tab-btn.active { background: var(--burgundy); color: #fff; border-color: var(--burgundy); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  label { display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 5px; }
+  textarea, input[type="text"], input[type="number"], select { width: 100%; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; }
+  textarea { font-family: Consolas, monospace; font-size: 0.85rem; }
+  .action-btn { background: var(--burgundy); color: #fff; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 10px; }
+  .action-btn.ia { background: var(--ia); }
+  canvas { max-width: 100%; border: 1px solid var(--border); border-radius: 8px; background: #eee; }
+  pre.cmd { background: #1e293b; color: #f8fafc; padding: 12px 14px; border-radius: 8px; overflow-x: auto; font-size: 0.86rem; }
+  footer { text-align: center; padding: 18px; background: #fdfbf7; border-top: 1px solid var(--border); font-size: 0.92rem; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-flex">
+    <div>
+      <h1>🖋️ Osmanlıca Resmî Evrak, Diplomatik ve Paleografya AI Skill</h1>
+      <p>TDV İA / TTK akademik transkripsiyon standardı, 1:1 piksel şerh aparatı ve Kubbealtı Lugati + TDV İslâm Ansiklopedisi bağlantılı İnteraktif HTML üreticisi.</p>
+    </div>
+    <div class="btn-group">
+      <a class="btn-bmc" href="https://buymeacoffee.com/shnfatih8" target="_blank" rel="noopener">☕ Bir Kahve Ismarla (Buy Me a Coffee)</a>
+      <a class="btn-sp" href="https://github.com/sponsors/shnfatih-hash" target="_blank" rel="noopener">💖 GitHub Sponsors</a>
+      <a class="btn-gh" href="https://github.com/shnfatih-hash/osmanlica-resmi-evrak" target="_blank" rel="noopener">⭐ GitHub &amp; Dosyalar</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab('p-card', this)">🗂️ Canlı İnteraktif HTML Çalışma Kartı</button>
+    <button class="tab-btn" onclick="openTab('p-split', this)">✂️ Diplomatik Bölge &amp; 1:1 Mühür Kesiti</button>
+    <button class="tab-btn" onclick="openTab('p-prompts', this)">✍️ 6 Hazır Akademik Prompt &amp; Kurulum</button>
+  </div>
+
+  <section id="p-card" class="panel active">
+    <div class="card">
+      <h3 style="margin-top:0;">Örnek Sadâret Arz Tezkiresi &amp; İrâde-i Seniyye İnteraktif Kartı</h3>
+      <p style="font-size:0.9rem; color:var(--muted);">Aşağıda canlı etkileşimli çalışma kartını inceleyebilir, JSON verisini düzenleyip kendi tek dosyalık <code>.html</code> ders/araştırma kartınızı indirebilirsiniz.</p>
+      <iframe id="card-frame" style="width:100%; height:540px; border:1px solid var(--border); border-radius:10px; background:#fff;"></iframe>
+      <div style="margin-top:12px;">
+        <button class="action-btn" onclick="renderCard()">✨ JSON'dan Kartı Güncelle</button>
+        <button class="action-btn ia" onclick="downloadCard()">💾 Tek Dosya HTML Olarak İndir</button>
+      </div>
+      <label style="margin-top:12px;">Yapılandırılmış Evrak JSON Verisi</label>
+      <textarea id="json-in" rows="12"></textarea>
+    </div>
+  </section>
+
+  <section id="p-split" class="panel">
+    <div class="card">
+      <h3 style="margin-top:0;">Diplomatik Bölge Ayırıcı (Tuğra/Başlık • Sağ Derkenar • Alt Mühür) &amp; 1:1 Kesit</h3>
+      <input type="file" accept="image/*" onchange="loadDoc(event)">
+      <div class="grid-3" style="margin-top:12px;">
+        <div><label>Üst Başlık / Davet / Tuğra (%22)</label><canvas id="c-top" width="320" height="120"></canvas></div>
+        <div><label>Sağ Derkenar / Hâmiş (%30)</label><canvas id="c-right" width="220" height="300"></canvas></div>
+        <div><label>Alt İmza &amp; Mühür (%24)</label><canvas id="c-bot" width="320" height="130"></canvas></div>
+      </div>
+      <hr style="border:none;border-top:1px solid var(--border);margin:16px 0;">
+      <div class="grid-3">
+        <div><label>Sol (x %)</label><input type="range" id="dx" min="0" max="90" value="30" oninput="cropDoc()"></div>
+        <div><label>Üst (y %)</label><input type="range" id="dy" min="0" max="90" value="75" oninput="cropDoc()"></div>
+        <div><label>Boyut (%) &amp; Yakınlaştırma (2x)</label><input type="range" id="dw" min="10" max="70" value="35" oninput="cropDoc()"></div>
+      </div>
+      <button class="action-btn ia" onclick="dlDocCrop()">💾 Mühür/İbare Kesitini PNG İndir</button>
+      <div style="margin-top:10px;"><canvas id="c-crop" width="500" height="180"></canvas></div>
+    </div>
+  </section>
+
+  <section id="p-prompts" class="panel">
+    <div class="card">
+      <h3 style="margin-top:0;">Kurulum ve Hazır İstemler (Paralel 10 Alt-Ajan Modu Dahil)</h3>
+      <pre class="cmd">git clone https://github.com/shnfatih-hash/osmanlica-resmi-evrak.git "$HOME\.gemini\config\skills\osmanlica-resmi-evrak"
+pip install Pillow</pre>
+      <p><strong>Mod 1 + Mod 4 (Tek Evrak Akademik Çeviriyazı + İnteraktif HTML):</strong></p>
+      <pre class="cmd">Bu proje klasöründeki Osmanlıca resmî evrakı üniversite transkripsiyon sistemiyle (TDV İA / TTK) satır satır oku. Okuyamadığın kelimeleri uydurma, [...] veya [kelime?] ile işaretleyip 1:1 piksel kesitiyle şerh tablosuna yaz. Hicrî/Rûmî tarihleri kesin Milâdî tarihe çevir ve Kubbealtı Lugati + TDV İslâm Ansiklopedisi bağlantılı İnteraktif HTML çalışma kartını bu klasöre kaydet.</pre>
+      <p><strong>Mod 5 (Çok Sayfalı Defteri 10 Paralel Alt-Ajan + Ortak Sözlük ile Okuma):</strong></p>
+      <pre class="cmd">Bu klasördeki çok sayfalı Osmanlıca defteri paralel alt-ajan orkestrasyonuyla oku: önce ortak bir glossary.md oluştur, sayfaları 10'arlı gruplar halinde paralel alt-ajanlara dağıt, her ajan kendi sayfasını çevirip kaydetsin ve sonunda Tutarlılık Editörü Alt-Ajanı ile kavram birliğini sağla.</pre>
+      <p>Kardeş Projeler: <a href="https://huggingface.co/spaces/sahanfatih/devlet-arsivleri-soykutugu" target="_blank"><strong>devlet-arsivleri-soykutugu</strong></a> • <a href="https://huggingface.co/spaces/sahanfatih/yazma-eser-paralel-tercume" target="_blank"><strong>yazma-eser-paralel-tercume</strong></a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>Projeyi faydalı buldunuz mu?</strong> Açık kaynaklı Osmanlı paleografyası ve dijital beşerî bilimler AI araçlarına gönüllü destek için:
+  <a href="https://buymeacoffee.com/shnfatih8" target="_blank" rel="noopener" style="font-weight:700; color:#8a6200; margin-left:6px;">☕ Buy Me a Coffee (shnfatih8)</a> •
+  <a href="https://github.com/sponsors/shnfatih-hash" target="_blank" rel="noopener" style="font-weight:700; color:#b82578; margin-left:6px;">💖 GitHub Sponsors</a>
+</footer>
+
+<script>
+const SAMPLE_DATA = {
+  kunye: {
+    baslik: "Örnek Diplomatik Çalışma Kartı — Sadâret Arz Tezkiresi ve İrâde-i Seniyye",
+    belge_turu: "Arz Tezkiresi & İrâde-i Seniyye (Rik‘a)",
+    orijinal_tarih: "H. 15 Şa‘bân 1278 / R. 3 Şubat 1277 → 15 Şubat 1862 Cumartesi"
+  },
+  satirlar: [
+    { no: "1", bolge: "Elkab", osmanlica: "عطوفتلو افندم حضرتلرى", akademik: "‘Aṭûfetlü efendim ḥażretleri,", gunumuz_turkcesi: "Şefkatli efendim hazretleri," },
+    { no: "2", bolge: "Nakil", osmanlica: "معروض چاكر كمينه‌لريدركه مجلس والادن قلمه آلنان مضبطه‌ده تصريح قلنديغى اوزره", akademik: "Ma‘rûż-ı çâker-i kemîneleridir ki, Meclis-i Vâlâ’dan ḳaleme alınan mażbaṭada taṣrîḥ ḳılındığı üzere", gunumuz_turkcesi: "Aciz kulunuzun arzıdır ki, Meclis-i Vâlâ tutanağında açıkça belirtildiği üzere" },
+    { no: "3", bolge: "Talep (Şerhli)", osmanlica: "مذكور جسر [خراب؟] اولمغله تعميرى خصوصنده اراده سنيه حضرت پادشاهى", akademik: "meẕkûr cisr [ḫarâb?]¹ olmağla ta‘mîri ḫuṣûṣunda irâde-i seniyye-i ḥażret-i pâdişâhî", gunumuz_turkcesi: "söz konusu köprü [harap?] olduğundan onarılması hususunda yüce padişah iradesi" }
+  ],
+  kelimeler: [
+    { osmanlica: "عطوفتلو", transkripsiyon: "‘aṭûfetlü", koken: "Ar.+Tr.", anlam: "Mâbeyn Başkâtibine ve bâlâ rütbesindekilere hitap unvanı", sorgu: "atufetli" },
+    { osmanlica: "مضبطه", transkripsiyon: "mażbaṭa", koken: "Arapça", anlam: "Meclis karar tutanağı", sorgu: "mazbata" },
+    { osmanlica: "جسر", transkripsiyon: "cisr", koken: "Arapça", anlam: "Köprü", sorgu: "cisr" }
+  ],
+  tdv_ia: [
+    { madde: "İrâde-i Seniyye", slug: "irade-i-seniyye", aciklama: "Padişahın arz tezkiresi üzerine verdiği resmî onay belgesi." },
+    { madde: "Meclis-i Vâlâ", slug: "meclis-i-vala-yi-ahkam-i-adliyye", aciklama: "1838'de kurulan yüksek Tanzimat kanun ve yargı meclisi." }
+  ],
+  serhler: [
+    { no: "1", satir: "3", ibare: "[ḫarâb?]", aciklama: "Üst nokta silik olduğundan 1:1 kesitle ḫarâb / münhedim alternatifleri karşılaştırılmıştır." }
+  ]
+};
+
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function generateCardHtml(d) {
+  const sRows = (d.satirlar||[]).map(s => `<div style="border-left:4px solid #9a6b2f;background:#fff;padding:12px 14px;margin-bottom:10px;border-radius:6px;border:1px solid #e2dac9;">
+    <div style="font-size:.8rem;color:#7a2e2e;font-weight:700;">Satır ${esc(s.no)} • ${esc(s.bolge)}</div>
+    <div dir="rtl" style="font-size:1.35rem;font-family:'Amiri','Traditional Arabic',serif;margin:4px 0;">${esc(s.osmanlica)}</div>
+    <div style="font-family:Georgia,serif;font-size:1.02rem;"><strong>İA/TTK:</strong> ${esc(s.akademik)}</div>
+    <div style="color:#334155;font-size:.92rem;margin-top:4px;"><strong>Günümüz Türkçesi:</strong> ${esc(s.gunumuz_turkcesi)}</div>
+  </div>`).join('');
+  const kRows = (d.kelimeler||[]).map(k => `<tr><td dir="rtl" style="font-size:1.2rem;">${esc(k.osmanlica)}</td><td><strong>${esc(k.transkripsiyon)}</strong></td><td>${esc(k.anlam)}</td><td><a href="https://lugatim.com/s/${encodeURIComponent(k.sorgu||k.transkripsiyon)}" target="_blank">Kubbealtı ↗</a></td></tr>`).join('');
+  const iaRows = (d.tdv_ia||[]).map(c => `<li><strong>${esc(c.madde)}:</strong> ${esc(c.aciklama)} <a href="https://islamansiklopedisi.org.tr/${encodeURIComponent(c.slug)}" target="_blank">TDV İA ↗</a></li>`).join('');
+  const shRows = (d.serhler||[]).map(sh => `<li><strong>[${esc(sh.no)}] Satır ${esc(sh.satir)} <code>${esc(sh.ibare)}</code>:</strong> ${esc(sh.aciklama)}</li>`).join('');
+  return `<!DOCTYPE html><html lang="tr"><head><meta charset="UTF-8"><title>${esc(d.kunye?.baslik)}</title>
+  <style>body{font-family:'Segoe UI',sans-serif;background:#f8f5ee;color:#1e242b;padding:18px;margin:0}h2{color:#7a2e2e;font-size:1.2rem;margin:14px 0 8px}table{width:100%;border-collapse:collapse;background:#fff}th,td{padding:8px;border:1px solid #e2dac9;text-align:left}</style></head>
+  <body><h1 style="font-size:1.3rem;margin:0 0 4px;">${esc(d.kunye?.baslik)}</h1>
+  <div style="font-size:.88rem;color:#5c6670;margin-bottom:12px;">${esc(d.kunye?.belge_turu)} • ${esc(d.kunye?.orijinal_tarih)}</div>
+  <h2>1. Satır Satır Okuma</h2>${sRows}
+  <h2>2. Kelime Çözümlemesi (Kubbealtı Lugati)</h2><table><tr><th>Osmanlıca</th><th>Çeviriyazı</th><th>Anlam</th><th>Sözlük</th></tr>${kRows}</table>
+  <h2>3. TDV İslâm Ansiklopedisi Kavramları</h2><ul>${iaRows}</ul>
+  <h2>4. Şerh ve Kritik Aparat</h2><ul>${shRows}</ul></body></html>`;
+}
+
+let lastHtml = '';
+function renderCard() {
+  try {
+    const d = JSON.parse(document.getElementById('json-in').value);
+    lastHtml = generateCardHtml(d);
+    document.getElementById('card-frame').srcdoc = lastHtml;
+  } catch (e) { alert('JSON format hatası: ' + e.message); }
+}
+function downloadCard() {
+  const blob = new Blob([lastHtml], {type:'text/html;charset=utf-8'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'osmanlica_evrak_karti.html'; a.click();
+}
+function openTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active'); btn.classList.add('active');
+}
+
+let docImg = null;
+function loadDoc(ev) {
+  const f = ev.target.files[0]; if (!f) return;
+  const im = new Image();
+  im.onload = () => {
+    docImg = im; const w = im.width, h = im.height;
+    const draw = (id, sx, sy, sw, sh) => { const c = document.getElementById(id); c.width = sw; c.height = sh; c.getContext('2d').drawImage(im, sx, sy, sw, sh, 0, 0, sw, sh); };
+    draw('c-top', 0, 0, w, Math.floor(h*0.22));
+    draw('c-right', Math.floor(w*0.70), 0, Math.floor(w*0.30), h);
+    draw('c-bot', 0, Math.floor(h*0.76), w, Math.floor(h*0.24));
+    cropDoc();
+  };
+  im.src = URL.createObjectURL(f);
+}
+function cropDoc() {
+  if (!docImg) return;
+  const x = Math.floor(docImg.width * parseInt(document.getElementById('dx').value,10)/100);
+  const y = Math.floor(docImg.height * parseInt(document.getElementById('dy').value,10)/100);
+  const w = Math.min(docImg.width-x, Math.floor(docImg.width * parseInt(document.getElementById('dw').value,10)/100));
+  const h = Math.min(docImg.height-y, Math.floor(docImg.height * 0.18));
+  const c = document.getElementById('c-crop'); c.width = w*2; c.height = h*2;
+  const ctx = c.getContext('2d'); ctx.imageSmoothingEnabled = false; ctx.drawImage(docImg, x, y, w, h, 0, 0, w*2, h*2);
+}
+function dlDocCrop() {
+  const a = document.createElement('a'); a.download = 'muhur_ibare_kesiti.png'; a.href = document.getElementById('c-crop').toDataURL('image/png'); a.click();
+}
+
+document.getElementById('json-in').value = JSON.stringify(SAMPLE_DATA, null, 2);
+renderCard();
+</script>
+</body>
+</html>
