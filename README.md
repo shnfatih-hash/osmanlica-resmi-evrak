@@ -28,7 +28,8 @@ Osmanlı Türkçesi ile kaleme alınmış resmî evrak ve arşiv belgelerini (**
 
 1. **Üniversite Transkripsiyon Standardı (TDV İA / TTK / İSAM):**
    - `â, î, û`, `ḥ, ḫ, ṣ, ż/ḍ, ṭ, ẓ, ġ, ḳ, ñ, s̱, ẕ` ve `‘` (ayn) / `’` (hemze) işaretleriyle tam akademik çeviriyazı + isteğe bağlı sadeleştirilmiş yayın modu.
-2. **Sıfır Halüsinasyon & Numaralı Şerh (Aparat) Sistemi:**
+2. **Sıfır Kayıp, Sıfır Halüsinasyon & Numaralı Şerh (Aparat) Sistemi:**
+   - Elkab, dua, vakfiye şartları, *şuhûdü'l-hâl* ve Arapça/Farsça mülemma ibareler *"zaten Türkçe / klasik formül"* diyerek özetlenmez; kenar `sahh` tashihleri ait olduğu cümleye işlenir, derkenar/buyuruldu notları ilgili paragrafın hemen altında sunulur.
    - Okunamayan veya tereddütlü her kelime `[...]`, `[kelime?]`, `[ek]`, `(!)` işaretleriyle belirtilir ve 1:1 piksel kesitiyle şerh tablosuna alınır.
 3. **5 Farklı Çalışma Yöntemi:**
    - **Mod 1:** Tek Evrak Derin Diplomatik Okuma

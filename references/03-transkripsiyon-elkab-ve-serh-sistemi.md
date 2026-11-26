@@ -66,7 +66,7 @@ Bu modül, Türkiye'deki üniversitelerde (Tarih, Türk Dili ve Edebiyatı, İla
 | :--- | :--- | :--- |
 | `fî` (`في`) | Fî | Tarihin başında ("... tarihinde") |
 | `m.` (`م`) | Minhu (منه) / Mîlâdî | Aynı aydan / aynı konudan (tarih tekrarı) |
-| `ṣaḥḥ` (`صح`) | Sahh (Doğrudur) | Üst âmir veya kalem kontrol/onay işareti |
+| `ṣaḥḥ` (`صح`) | Sahh (Doğrudur / Tashih) | 1) Üst âmir/kalem onay işareti; 2) Kenarda unutulmuş metin tamamlama kaydı (cümle içine `[... (sahh)]` ile eklenir) |
 | `mîm` (`م` kuyruklu) | Mûcebince / Mahalline kaydolundu | İşlem tamamlandı işareti |
 | `M, S, Ra, R, Ca, C, B, Ş, N, L, Za, Z` | Hicrî 12 ayın resmî arşiv kısaltmaları | Muharrem → Zilhicce (`scripts/tarih_cevirici.py` ile otomatik çözülür) |
 | `gurre` (`غره`) | Ayın 1. günü | `fî gurre-i Receb` = 1 Receb |
@@ -82,3 +82,5 @@ Bu modül, Türkiye'deki üniversitelerde (Tarih, Türk Dili ve Edebiyatı, İla
 - `[mütesellim?]²` → Şerh tablosunda alternatif ihtimaller (`mütesellim` / `mütevellî`), harf iskeleti gerekçesi ve sözlük/TDV İA kontrolü yazılır.
 - `[sene]³` → Belgede atlanmış ama diplomatik kalıpta zorunlu ekleme.
 - `vilâyet-i meẕkûr (!)⁴` → Kâtibin gramer/imlâ sürçmesi (`mezkûre` yerine `mezkûr` yazılmış).
+- **Zamir Mercii ve Hukukî/Diplomatik Çift Anlamlılık Notu:** Harfler tam okunsa dahi zamir mercii veya hukukî hükmü birden fazla yoruma açık ibarelerde bağlama en makul aktarım metne işlenir ve ilgili paragrafın hemen altına `Not:` satırı açılarak alternatif yorum belirtilir.
+- **İktibas ve Kaynak Parantezi Kuralı:** Metin içindeki âyet, hadis ve fıkhî/resmî alıntılar çift tırnak (`" "`) içinde gösterilir; `[Bakara: 181]` gibi referans parantezleri ile `[...]`, `[kelime?]` şerh ayraçları aynen korunur.

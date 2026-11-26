@@ -24,9 +24,9 @@ Kullanıcı belge(ler) paylaştığında veya talep ilettiğinde amacına uygun 
    - **Kurumsal ve Tarihsel Kavramlar (TDV İA Atıflı)** bölümü (`islamansiklopedisi.org.tr` madde bağlantıları ve kısa diplomatik notlar),
    - **Şerh / Aparat (Çözülemeyen ve Şüpheli Yerler)** paneli.
 5. **Mod 5 — Çok Sayfalı Defter / Yazma Eserde Paralel Alt-Ajan (`Subagents`) + Ortak Sözlük (`glossary.md`) Orkestrasyonu:**
-   - 20–100+ sayfalık defter, mecmua veya el yazması PDF/görsel dizinlerinde ana oturum koordinatör olarak çalışır; proje klasöründe ortak bir `glossary.md` (ıstılahlar, şahıs/yer adları ve çeviri/transkripsiyon ilkeleri sözlüğü) başlatır.
+   - 20–100+ sayfalık defter, şer‘iyye sicili, vakfiye mecmuası veya el yazması PDF/görsel dizinlerinde ana oturum koordinatör olarak çalışır; proje klasöründe ortak bir `glossary.md` (ıstılahlar, şahıs/yer adları ve çeviri/transkripsiyon ilkeleri sözlüğü) başlatır.
    - Sayfaları **10'arlı gruplar halinde paralel alt-ajanlara (`invoke_subagent`)** dağıtır; her ajan kendi sayfasını okuyup/çevirip `sayfalar/sayfa_XXX.md` olarak kaydeder ve yeni terimleri bildirir.
-   - Tüm sayfalar tamamlandığında ayrı bir **Tutarlılık ve Tahkik Editörü Alt-Ajanı** görevlendirerek `glossary.md` üzerinden tüm sayfalardaki kavram, özel isim ve üslup birliğini denetler *(Arapça/Osmanlıca/Farsça telif ve şerh yazmaları için kardeş beceri `yazma-eser-paralel-tercume` ile tam uyumludur)*.
+   - Tüm sayfalar tamamlandığında ayrı bir **Tutarlılık ve Tahkik Editörü Alt-Ajanı** görevlendirerek `glossary.md` üzerinden varak sonlarındaki **rekabe (*müş‘ir kelime*)** tekrarlarını temizler, sayfa geçişinde bölünen cümleleri birleştirir ve tüm sayfalardaki kavram, özel isim ve üslup birliğini denetler *(Arapça/Osmanlıca/Farsça telif ve şerh yazmaları için kardeş beceri `yazma-eser-paralel-tercume` ile tam uyumludur)*.
 
 ---
 
@@ -46,9 +46,16 @@ Okuma çıktısında iki düzey desteklenir; kullanıcı aksini istemedikçe **D
 
 ---
 
-## 3. Altın Kural: Sıfır Halüsinasyon ve Şerh (Kritik Aparat) Protokolü
+## 3. Altın Kurallar: Sıfır Kayıp, Sıfır Halüsinasyon ve Şerh (Kritik Aparat) Protokolü
 
-Osmanlıca el yazması okumasında **tahmin uydurmak kesinlikle yasaktır.** Okunamayan, silik, yırtık, mürekkep dağılmış veya birden fazla okunuşa açık her nokta şu standart akademik işaretlerle gösterilir ve **numaralı Şerh (Aparat) Tablosu**'nda açıklanır:
+1. **Tam Metin Sadakati ("Sıfır Kayıp" ve "Sıfır Özetleme") ve Mülemma Aktarım Kuralı:**
+   - Belgenin *Günümüz Türkçesi* katmanında hiçbir Osmanlıca inşâ cümlesi *"zaten Türkçe"* denilerek sadeleştirilmeden bırakılmaz; uzun bürokratik/şer‘î cümleler ve izâfet terkipleri ıstılahî derinliği korunarak günümüz akademik Türkçesine eksiksiz aktarılır.
+   - Davet, elkab, dua cümleleri, vakfiyelerdeki *hamdele/salvele* ve *şart-ı vâkıf / beddua* bölümleri, hüccet/ilâmlardaki *şuhûdü'l-hâl* listeleri, Arapça âyet/hadis/fıkıh ibareleri, Farsça beyitler, ketebe, temellük ve vakıf mühür kayıtları *"burası klasik formüldür / tekrardır"* denilerek **asla özetlenmez veya atlanmaz**.
+2. **`Sahh` (`صح`), Satır Arası ve Derkenar (`Hâmiş` / `Buyuruldu`) Konumlandırması:**
+   - Kâtip veya müstensihin ana metinde unuttuğu ve kenarda `صح` (*sahh*) ile tamamladığı metin tashihleri doğrudan ait olduğu cümlenin içine (`[... (sahh)]` iziyle) yerleştirilir *(üst âmir onay işareti olan tekil `ṣaḥḥ` / buyuruldu kaydıyla karıştırılmaz)*.
+   - Derkenar, kalem havale notları ve hâmiş kayıtları evrakın en sonuna yığılmaz; ilgili diplomatik rüknün veya paragrafın hemen altında numaralı/başlıklı olarak sunulur.
+   - Zamir mercii birden fazla ihtimale açık veya hukukî/diplomatik çift yoruma müsait ifadelerde bağlama en uygun aktarım yapılır; hemen altına kısa bir `Not:` satırı açılarak alternatif yorum ihtimali belirtilir.
+3. **Sıfır Tahmin ve Şerh Tablosu:** Osmanlıca el yazması okumasında **tahmin uydurmak kesinlikle yasaktır.** Okunamayan, silik, yırtık, mürekkep dağılmış veya birden fazla okunuşa açık her nokta şu standart akademik işaretlerle gösterilir ve **numaralı Şerh (Aparat) Tablosu**'nda açıklanır:
 
 | İşaret | Anlamı | Şerh Zorunluluğu |
 | :--- | :--- | :--- |
