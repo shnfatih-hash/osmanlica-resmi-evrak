@@ -65,6 +65,10 @@ git clone https://github.com/shnfatih-hash/osmanlica-resmi-evrak.git "$HOME\.gem
 # macOS / Linux — Google Antigravity veya Claude Code
 git clone https://github.com/shnfatih-hash/osmanlica-resmi-evrak.git ~/.gemini/config/skills/osmanlica-resmi-evrak
 git clone https://github.com/shnfatih-hash/osmanlica-resmi-evrak.git ~/.claude/skills/osmanlica-resmi-evrak
+
+# Claude Code Plugin Marketplace ile tek komutla kurulum:
+claude plugin marketplace add shnfatih-hash/osmanlica-resmi-evrak
+claude plugin install osmanlica-resmi-evrak@osmanlica-resmi-evrak
 ```
 
 ### 3. Chrome DevTools MCP Ayarı ve ⚠️ `"Web Sayfasına Erişim Engellendi"` Hatasının Çözümü

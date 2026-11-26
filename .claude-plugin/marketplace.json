@@ -1,0 +1,14 @@
+{
+  "name": "osmanlica-resmi-evrak",
+  "owner": {
+    "name": "Fatih Şahan",
+    "url": "https://github.com/shnfatih-hash"
+  },
+  "plugins": [
+    {
+      "name": "osmanlica-resmi-evrak",
+      "source": "./",
+      "description": "TDV İA/TTK transkripsiyon, 1:1 piksel şerh, Kubbealtı ve TDV İA bağlantılı Osmanlıca resmî evrak okuma becerisi."
+    }
+  ]
+}

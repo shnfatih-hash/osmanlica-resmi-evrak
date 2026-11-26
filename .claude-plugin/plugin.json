@@ -1,0 +1,14 @@
+{
+  "name": "osmanlica-resmi-evrak",
+  "version": "1.2.0",
+  "description": "Osmanlıca resmî evrak (Ferman, Berat, İrade, Hüccet, Tahrirat, Vakfiye) için TDV İA/TTK akademik transkripsiyon, 1:1 piksel şerh aparatı, 3 yönlü tarih çevirici ve İnteraktif HTML çalışma kartı becerisi.",
+  "author": {
+    "name": "Fatih Şahan",
+    "url": "https://github.com/shnfatih-hash"
+  },
+  "repository": "https://github.com/shnfatih-hash/osmanlica-resmi-evrak",
+  "license": "MIT",
+  "skills": [
+    "."
+  ]
+}
