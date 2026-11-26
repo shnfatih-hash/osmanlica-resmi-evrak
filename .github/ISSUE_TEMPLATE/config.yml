@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Hugging Face Topluluk Tartışmaları (Hesapsız / Hızlı Soru)
+    url: https://huggingface.co/spaces/sahanfatih/osmanlica-resmi-evrak/discussions
+    about: Canlı web aracı üzerinden soru sormak, örnek evrak kartı paylaşmak veya fikir tartışmak için.

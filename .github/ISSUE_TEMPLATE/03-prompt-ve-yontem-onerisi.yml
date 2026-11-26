@@ -1,0 +1,12 @@
+name: "💡 Yeni Prompt, Yöntem veya Özellik Önerisi"
+description: "Ferman, berat, irade, hüccet veya vakfiye okumaları için yeni prompt şablonu veya özellik önerin."
+title: "[Öneri] "
+labels: ["katki-prompt"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: "Öneriniz veya Prompt Şablonunuz"
+      placeholder: "Evrak okuma, karşılaştırmalı tahkik veya HTML çalışma kartı için fikrinizi yazın."
+    validations:
+      required: true

@@ -1,0 +1,33 @@
+name: "❓ Teknik Soru & Kurulum Desteği"
+description: "Kurulum, Chrome DevTools MCP, TDV İA transkripsiyonu, tarih çevirici veya İnteraktif HTML üretimi hakkında soru sorun."
+title: "[Soru] "
+labels: ["soru-destek"]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: "Kullandığınız Ortam / Araç"
+      options:
+        - Google Antigravity
+        - Claude Code / Claude Desktop
+        - Hugging Face Canlı Web Aracı
+        - Doğrudan Python Betikleri
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: "İşletim Sistemi"
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: "Sorunuz / Takıldığınız Adım"
+      placeholder: "Karşılaştığınız durumu ve varsa hata mesajını buraya yazın."
+    validations:
+      required: true

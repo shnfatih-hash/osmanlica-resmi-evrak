@@ -1,0 +1,17 @@
+name: "🐛 Hata / Tarih Dönüşümü / Betik Sorunu Bildirimi"
+description: "tarih_cevirici.py, evrak_bolge_kesici.py, sozluk_ve_html_uretici.py veya transkripsiyon kurallarında hata bildirin."
+title: "[Hata] "
+labels: ["hata"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Karşılaşılan Hata"
+      placeholder: "Hangi belge/girdi ile hangi hatayı aldığınızı kısaca yazın."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Hata Çıktısı / Örnek Girdi (Varsa)"
+      render: text

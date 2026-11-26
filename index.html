@@ -59,6 +59,7 @@
     <button class="tab-btn active" onclick="openTab('p-card', this)">🗂️ Canlı İnteraktif HTML Çalışma Kartı</button>
     <button class="tab-btn" onclick="openTab('p-split', this)">✂️ Diplomatik Bölge &amp; 1:1 Mühür Kesiti</button>
     <button class="tab-btn" onclick="openTab('p-prompts', this)">✍️ 6 Hazır Akademik Prompt &amp; Kurulum</button>
+    <button class="tab-btn" onclick="openTab('p-contrib', this)">🤝 Soru Sor &amp; Katkı Sun</button>
   </div>
 
   <section id="p-card" class="panel active">
@@ -105,6 +106,36 @@ pip install Pillow</pre>
       <p><strong>Mod 5 (Çok Sayfalı Defteri 10 Paralel Alt-Ajan + Ortak Sözlük ile Okuma):</strong></p>
       <pre class="cmd">Bu klasördeki çok sayfalı Osmanlıca defteri paralel alt-ajan orkestrasyonuyla oku: önce ortak bir glossary.md oluştur, sayfaları 10'arlı gruplar halinde paralel alt-ajanlara dağıt, her ajan kendi sayfasını çevirip kaydetsin ve sonunda Tutarlılık Editörü Alt-Ajanı ile kavram birliğini sağla.</pre>
       <p>Kardeş Projeler: <a href="https://huggingface.co/spaces/sahanfatih/devlet-arsivleri-soykutugu" target="_blank"><strong>devlet-arsivleri-soykutugu</strong></a> • <a href="https://huggingface.co/spaces/sahanfatih/yazma-eser-paralel-tercume" target="_blank"><strong>yazma-eser-paralel-tercume</strong></a></p>
+    </div>
+  </section>
+
+  <section id="p-contrib" class="panel">
+    <div class="card">
+      <h3 style="margin-top:0;">🤝 Teknik Soru Sor, Diplomatik Terim Öner veya Katkıda Bulun</h3>
+      <p style="font-size:0.93rem;color:var(--muted);">Kod veya Git bilmeden de aşağıdaki hazır formlarla sorunuzu iletebilir, yeni elkab/kısaltma/TDV İA kavramı veya prompt şablonu önerebilirsiniz.</p>
+      <div class="grid-2">
+        <div style="border:1px solid var(--border);border-radius:10px;padding:15px;background:#faf7f0;">
+          <strong>❓ Teknik Soru &amp; Kurulum Desteği</strong>
+          <p style="font-size:0.88rem;color:var(--muted);margin:6px 0 12px;">Chrome DevTools MCP, transkripsiyon standardı, tarih çevirici veya HTML kartı soruları.</p>
+          <a class="action-btn" style="display:inline-block;text-decoration:none;margin-top:0;" href="https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=01-soru-ve-teknik-destek.yml" target="_blank" rel="noopener">Soru Formunu Aç ↗</a>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:10px;padding:15px;background:#faf7f0;">
+          <strong>📖 Diplomatik Terim, Elkab veya Tamlama Katkısı</strong>
+          <p style="font-size:0.88rem;color:var(--muted);margin:6px 0 12px;">Yeni bir elkab kalıbı, arşiv kısaltması veya TDV İA kurumsal kavram bağlantısı önerin.</p>
+          <a class="action-btn ia" style="display:inline-block;text-decoration:none;margin-top:0;" href="https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=02-terim-ve-sozluk-katkisi.yml" target="_blank" rel="noopener">Terim Katkısı Gönder ↗</a>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:10px;padding:15px;background:#faf7f0;">
+          <strong>💡 Yeni Prompt veya Özellik Önerisi</strong>
+          <p style="font-size:0.88rem;color:var(--muted);margin:6px 0 12px;">Ferman, berat, hüccet veya vakfiye okumaları için verimli prompt ve yöntem önerin.</p>
+          <a class="action-btn" style="display:inline-block;text-decoration:none;margin-top:0;background:#2b6cb0;" href="https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=03-prompt-ve-yontem-onerisi.yml" target="_blank" rel="noopener">Öneri Gönder ↗</a>
+        </div>
+        <div style="border:1px solid var(--border);border-radius:10px;padding:15px;background:#faf7f0;">
+          <strong>🐛 Hata Bildirimi &amp; 💬 Topluluk Tartışmaları</strong>
+          <p style="font-size:0.88rem;color:var(--muted);margin:6px 0 12px;">Tarih dönüşümü veya betik hatası bildirin; Hugging Face Topluluk panosunda tartışın.</p>
+          <a class="action-btn" style="display:inline-block;text-decoration:none;margin-top:0;background:#9b1c1c;" href="https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=04-hata-bildirimi.yml" target="_blank" rel="noopener">Hata Bildir ↗</a>
+          <a class="action-btn" style="display:inline-block;text-decoration:none;margin-top:0;margin-left:6px;background:#24292f;" href="https://huggingface.co/spaces/sahanfatih/osmanlica-resmi-evrak/discussions" target="_blank" rel="noopener">HF Topluluk ↗</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>

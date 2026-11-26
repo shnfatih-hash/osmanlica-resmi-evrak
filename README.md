@@ -118,6 +118,17 @@ python scripts/sozluk_ve_html_uretici.py examples/ornek_evrak_verisi.json --out 
 
 ---
 
+## 🤝 Soru Sor, Terim Ekle ve Katkıda Bulun
+
+Kod veya Git bilmeden de aşağıdaki hazır formlarla teknik soru sorabilir, yeni diplomatik kalıp/elkab/TDV İA terimi veya prompt önerisi paylaşabilirsiniz (ayrıntılar: [CONTRIBUTING.md](CONTRIBUTING.md)):
+
+- ❓ **[Teknik Soru & Kurulum Desteği](https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=01-soru-ve-teknik-destek.yml)**
+- 📖 **[Yeni Diplomatik Terim, Elkab veya Tamlama Katkısı](https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=02-terim-ve-sozluk-katkisi.yml)**
+- 💡 **[Yeni Prompt veya Özellik Önerisi](https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=03-prompt-ve-yontem-onerisi.yml)**
+- 🐛 **[Hata Bildirimi](https://github.com/shnfatih-hash/osmanlica-resmi-evrak/issues/new?template=04-hata-bildirimi.yml)** • 💬 **[Hugging Face Topluluk](https://huggingface.co/spaces/sahanfatih/osmanlica-resmi-evrak/discussions)**
+
+---
+
 ## ♥ Projeye Gönüllü Destek
 
 Bu proje tamamen ücretsiz ve açık kaynaklıdır; herkesin özgürce kullanımına açık kalacaktır. Çalışmayı faydalı bulduysanız ve yeni Osmanlı arşivi, yazma eser ve dijital beşerî bilimler AI Skill'lerinin geliştirilmesine gönüllü olarak katkıda bulunmak isterseniz bir kahve ısmarlayarak veya GitHub Sponsors üzerinden destek olabilirsiniz:

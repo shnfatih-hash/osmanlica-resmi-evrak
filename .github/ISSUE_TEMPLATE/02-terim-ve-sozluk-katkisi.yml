@@ -1,0 +1,27 @@
+name: "📖 Yeni Diplomatik Terim, Elkab veya Tamlama Katkısı"
+description: "Osmanlıca resmî evrak sözlüğüne yeni bir diplomatik kalıp, elkab, kısaltma veya TDV İA kavram bağlantısı önerin."
+title: "[Sözlük / Diplomatik Katkı] "
+labels: ["katki-sozluk"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Katkı Türü"
+      options:
+        - Diplomatik Kalıp / Elkab
+        - Arşiv Kısaltması / İşaret
+        - Mali / Hukukî / Kurumsal Terim (TDV İA)
+        - Yeni Belge Türü Anatomisi
+    validations:
+      required: true
+  - type: textarea
+    id: entry
+    attributes:
+      label: "Osmanlıca Yazılışı, Transkripsiyonu ve Anlamı"
+      placeholder: "Örn: بیورلدی | buyuruldu | Sadrazam veya valilerin evrak kenarına yazdığı icra emri"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: "Kaynak / TDV İA veya Kubbealtı Referansı (İsteğe Bağlı)"
