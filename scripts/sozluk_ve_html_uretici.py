@@ -20,8 +20,28 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 from pathlib import Path
 from urllib.parse import quote
+
+HARAKAT_AND_CTRL_RE = re.compile(r"[\u064B-\u065F\u0670\u0640\u200C\u200D]")
+
+
+def normalize_ottoman_unicode(text: str | None) -> str:
+    """
+    Osmanlıca/Arapça metinlerdeki Ye (ي/ى/ی), Kef (ك/ک/گ/ڭ) ve ZWNJ/hareke
+    farklarını kanonik olarak eşitler (karşılaştırma ve sözlük araması için).
+    """
+    if not text:
+        return ""
+    s = HARAKAT_AND_CTRL_RE.sub("", str(text))
+    return (
+        s.replace("\u064a", "\u06cc")
+        .replace("\u0649", "\u06cc")
+        .replace("\u0643", "\u06a9")
+        .replace("\u06af", "\u06a9")
+        .replace("\u06ad", "\u06a9")
+    )
 
 
 def esc(text: str | None) -> str:
@@ -320,10 +340,17 @@ function setMode(mode) {{
   document.getElementById('btn-academic').classList.toggle('active', mode === 'academic');
   document.getElementById('btn-simple').classList.toggle('active', mode === 'simple');
 }}
+function normOsm(str) {{
+  return (str || '').toLowerCase()
+    .replace(/[\u064B-\u065F\u0670\u0640\u200C\u200D]/g, '')
+    .replace(/[\u064a\u0649]/g, '\u06cc')
+    .replace(/[\u0643\u06af\u06ad]/g, '\u06a9')
+    .replace(/[â]/g, 'a').replace(/[î]/g, 'i').replace(/[û]/g, 'u');
+}}
 function filterTable(tableId, query) {{
-  const q = query.trim().toLowerCase();
+  const q = normOsm(query.trim());
   document.querySelectorAll('#' + tableId + ' tbody tr.filter-row').forEach(tr => {{
-    tr.style.display = tr.innerText.toLowerCase().includes(q) ? '' : 'none';
+    tr.style.display = normOsm(tr.innerText).includes(q) ? '' : 'none';
   }});
 }}
 </script>
